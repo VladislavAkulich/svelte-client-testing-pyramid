@@ -1,16 +1,10 @@
 <script lang="ts">
-	import type { SvelteComponent } from 'svelte';
-	import { items, filtered } from '../store';
+	import { filterUsers } from '$lib/functions/functions';
+	import { items, filtered } from '../../store';
 	function inputText(event: { target: object }) {
 		if (event.target) {
 			const value = event.target.value;
-
-			let filteredUsers: Array<object> = [];
-			for (let item of $items) {
-				if (item.name.toLowerCase().includes(value.toLowerCase())) {
-					filteredUsers.push(item);
-				}
-			}
+			let filteredUsers: Array<object> = filterUsers($items, value);
 			filtered.set(filteredUsers);
 		}
 	}

@@ -1,4 +1,4 @@
-import SearchForm from '$lib/searchForm.svelte';
+import SearchForm from '$lib/components/searchForm.svelte';
 import { test, expect } from '@playwright/experimental-ct-svelte';
 
 test.describe('Search should works', async () => {

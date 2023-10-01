@@ -1,11 +1,13 @@
+import { defineConfig } from "vite";
 import { sveltekit } from '@sveltejs/kit/vite';
 
 /** @type {import('vite').UserConfig} */
-const config = {
+export default defineConfig ({
 	plugins: [sveltekit()],
 	test: {
-		include: ['src/**/*.{test,spec}.{js,ts}']
+		globals: true,
+		include: ['./tests/unit/**/*.{test,spec}.{js,ts}'],
+		environment: 'jsdom',
+		setupFiles: ['./tests/unit/setupTest.ts']
 	}
-};
-
-export default config;
+});

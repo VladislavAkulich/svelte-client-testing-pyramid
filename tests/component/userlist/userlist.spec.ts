@@ -1,4 +1,4 @@
-import List from '$lib/list.svelte';
+import List from '$lib/components/list.svelte';
 import { test, expect } from '@playwright/experimental-ct-svelte';
 
 test.describe('user list tests', async () => {

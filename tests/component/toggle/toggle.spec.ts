@@ -1,4 +1,4 @@
-import Toggle from '$lib/toggle.svelte';
+import Toggle from '$lib/components/toggle.svelte';
 import { test, expect } from '@playwright/experimental-ct-svelte';
 
 test.describe('toggle tests', async () => {

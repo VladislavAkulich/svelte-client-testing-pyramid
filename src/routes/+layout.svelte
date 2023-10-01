@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Toggle from '../lib/toggle.svelte';
+	import Toggle from '../lib/components/toggle.svelte';
 </script>
 
 <header>

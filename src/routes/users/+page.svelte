@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { items, filtered } from '../../store';
 	import type { PageData } from '../$types';
-	import SearchForm from '$lib/searchForm.svelte';
+	import SearchForm from '$lib/components/searchForm.svelte';
 
 	export let data: PageData;
 	items.set(data.users);
