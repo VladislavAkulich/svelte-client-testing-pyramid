@@ -9,8 +9,8 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"vitest": "vitest  --config ./vite.config.js",
-		"test": "playwright test --config ./playwright.config.ts",
 		"test-ct": "playwright test -c playwright-ct.config.ts",
+		"test": "playwright test --config ./playwright.config.ts",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write ."
 	},
