@@ -3,6 +3,7 @@
 ## Unit tests / Component tests
 
 Exeecute unit-tests and component tests based on testing-library/svelte:
+
 ```bash
 npm run vitest
 ```
@@ -10,6 +11,7 @@ npm run vitest
 ## Component tests
 
 Execute component test with playwright-ct:
+
 ```bash
 npm run test-ct
 ```
@@ -22,5 +24,5 @@ Execute playwright tests:
 npm run test
 ```
 
-- Uses DevTools protocol and lighthouse for performance. 
+- Uses DevTools protocol and lighthouse for performance.
 - Uses Ax-Playwright for accessibility.

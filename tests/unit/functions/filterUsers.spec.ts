@@ -1,38 +1,37 @@
-import { filterUsers } from "$lib/functions/functions"
+import { filterUsers } from '$lib/functions/functions';
 
 const testData: Array<object> = [
-    {
-        name: 'Alex'
-    },
-    {
-        name: 'Tim'
-    },
-    {
-        name: 'Derek'
-    }
-]
+	{
+		name: 'Alex'
+	},
+	{
+		name: 'Tim'
+	},
+	{
+		name: 'Derek'
+	}
+];
 
 it('filer users function', () => {
-    const result: any = filterUsers(testData, 'Alex')
+	const result: Array<object> = filterUsers(testData, 'Alex');
 
-    expect(result).toStrictEqual([{name: 'Alex'}])
-})
-
+	expect(result).toStrictEqual([{ name: 'Alex' }]);
+});
 
 it('filer users function with empty array', () => {
-    const result: any = filterUsers([], 'Alex')
+	const result: Array<object> = filterUsers([], 'Alex');
 
-    expect(result).toStrictEqual([])
-})
+	expect(result).toStrictEqual([]);
+});
 
 it('filer users function with empty filter', () => {
-    const result: any = filterUsers([], '')
+	const result: Array<object> = filterUsers([], '');
 
-    expect(result).toStrictEqual([])
-})
+	expect(result).toStrictEqual([]);
+});
 
 it('filer users function with few matches', () => {
-    const result: any = filterUsers(testData, 'e')
+	const result: Array<object> = filterUsers(testData, 'e');
 
-    expect(result).toStrictEqual([{name: 'Alex'}, {name: 'Derek'}])
-})
+	expect(result).toStrictEqual([{ name: 'Alex' }, { name: 'Derek' }]);
+});
